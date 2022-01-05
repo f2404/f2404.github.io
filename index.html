@@ -5,7 +5,8 @@
   xmlhttp.onreadystatechange = function () {
   if (xmlhttp.readyState == 4)
   {
-  alert(xmlhttp.responseText);
+  //alert(xmlhttp.responseText);
+  alert(`isTr=${userIsTravelling()}`);
   }
   };
   xmlhttp.send(post_data);
