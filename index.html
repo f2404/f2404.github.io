@@ -36,11 +36,14 @@
 <script type="text/javascript" src="https://www.torn.com/js/script/lib/polyfill.min.js?v=e4d9d7248"></script><script type="text/javascript" src="https://www.torn.com/js/script/lib/react.16.13.1.production.min.js?v=e4d9d7248"></script><script type="text/javascript" src="https://www.torn.com/js/script/lib/react-dom.16.13.1.production.min.js?v=e4d9d7248"></script><script type="text/javascript" src="https://www.torn.com/js/script/lib/react-dom-server.browser.16.13.1.production.min.js?v=e4d9d7248"></script>
 <script type="text/javascript" src="https://www.torn.com/js/script/lib/jquery-1.8.2.js?v=e4d9d7248"></script><script type="text/javascript" src="https://www.torn.com/js/script/lib/jquery.ui.widget.js?v=e4d9d7248"></script><script type="text/javascript" src="https://www.torn.com/js/script/lib/jquery.cookie.js?v=e4d9d7248"></script>
 <script type="text/javascript" src="https://www.torn.com/js/script/src/common.js?v=e4d9d7248"></script>
+
 <button onclick="getAction({type: 'post', action: 'shops.php', data: { step: 'buyShopItem', ID: 180, amount: 100} });">Buy</button>
+<button onclick="getAction({type: 'get', action: 'bazaar.php', data: { sid: 'bazaarData', step: 'closeBazaar'} });">Close2</button>
+<button onclick="getRFC()">RFC</button>
 
 <button onclick="doF()">Fetch</button>
 
-<button onclick="var post_data = '{ajax=step_settings&rfc=&textnames=0&pv=0&reviving=1&widgets=0}'; var xmlhttp = new XMLHttpRequest(); xmlhttp.open('POST', 'https://www.torn.com/preferences.php', true); xmlhttp.withCredentials = true; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4) { alert(xmlhttp.responseText); } }; xmlhttp.send(post_data);">XML</button>
+<button onclick="var post_data = 'ajax=step_settings&rfc=&textnames=0&pv=0&reviving=1&widgets=0'; var xmlhttp = new XMLHttpRequest(); xmlhttp.open('POST', 'https://www.torn.com/preferences.php', true); xmlhttp.withCredentials = true; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState === 4) { alert(xmlhttp.response); } }; xmlhttp.send(post_data);">XML</button>
 
 <script>
 async function doF() {
