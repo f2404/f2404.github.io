@@ -16,6 +16,8 @@
 
 <button onclick="doF()">Fetch</button>
 
+<button onclick="var post_data = '{ajax=step_settings&rfc=&textnames=0&pv=0&reviving=1&widgets=0}'; var xmlhttp = new XMLHttpRequest(); xmlhttp.open('POST', 'https://www.torn.com/preferences.php', true); xmlhttp.withCredentials = true; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4) { alert(xmlhttp.responseText); } }; xmlhttp.send(post_data);">XML</button>
+
 <script>
 async function doF() {
 await fetch("https://www.torn.com/page.php?sid=apiData", {
